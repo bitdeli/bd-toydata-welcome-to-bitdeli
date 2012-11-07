@@ -3,7 +3,7 @@ from bitdeli.widgets import Text, Bar
 from collections import Counter
 
 sales = Counter()
-for profile in bitdeli.profiles():
+for profile in profiles():
     for event in profile['events']:
         if event['event'] == 'buy':
             sales[event['product']] += event['price']
